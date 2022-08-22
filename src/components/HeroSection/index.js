@@ -196,8 +196,8 @@ const HeroSection = () => {
           <MiniAbout>
             DogeVerse is a collection of 8888 Doge Shibes built on DogeChain!
           </MiniAbout>
-          <First>First 800 FREE (max. 1 NFT / tx.)</First>
-          <Then>Then 222 wDOGE each (max 10 NFT / tx.)</Then>
+          <First>First 888 FREE (max. 5 NFT / tx.)</First>
+          <Then>Then 222 wDOGE each (max 15 NFT / tx.)</Then>
           <Minted>
             <MintCText>Minted</MintCText>
             <MintCText2>{supply}/8888</MintCText2>
