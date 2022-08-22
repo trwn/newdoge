@@ -44,6 +44,6 @@ export const ViewNFT = styled.button`
     margin-left: 65vw;
     margin-top: 45px;
     font-size: 0.9em;
-    width: 105px;
+    width: 110px;
   }
 `;
