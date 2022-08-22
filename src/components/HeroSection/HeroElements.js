@@ -204,7 +204,7 @@ export const MintCText2 = styled.div`
   color: white;
   font-size: 24px;
   position: absolute;
-  padding-left: 365px;
+  padding-left: 335px;
 
   @media screen and (max-width: 767px) {
   padding-left: 230px;

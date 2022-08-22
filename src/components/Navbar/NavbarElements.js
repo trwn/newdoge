@@ -18,19 +18,26 @@ export const Logo = styled.img`
   margin-left: auto;
   margin-right: auto;
   background: #de9e45;
+  
 `;
 
 export const ViewNFT = styled.button`
   display: flex;
   color: white;
+  text-align: center;
   background-color: black;
-  font-size: 15px;
+  font-size: 1em;
   margin: 1em;
   padding: 0.35em 1em;
   border: 2px solid orange;
-  border-radius: 10px;
+  border-radius: 3px;
+  position: absolute;
   margin-left: 90vw;
   margin-top: 25px;
   height: 35px;
   width: 100px;
-`;
+  
+  
+`
+
+

@@ -6,7 +6,7 @@ export const FaqSection = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 600px;
+  height: 650px;
   background-color: #282828;
   @media screen and (max-width: 767px) {
     height: 700px;

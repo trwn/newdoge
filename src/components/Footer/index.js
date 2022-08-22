@@ -30,7 +30,7 @@ const Footer = () => {
             <Info>
               DogeVerse&copy; 2022
               <br></br>
-              Contract address: 0x1f954C3c57DC4C8226529cD1f5FbA1Ab7fcd97E9
+              Contract address: xxx
             </Info>
             <SocialIcons>
               <SocialIconsLink href="" target="_blank" aria-label="Twitter">
