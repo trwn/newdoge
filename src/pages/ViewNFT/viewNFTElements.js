@@ -85,7 +85,7 @@ export const ViewNFTs = styled.button`
   @media screen and (max-width: 767px) {
     height: 30px;
     margin-left: 65vw;
-    margin-top: -8px;
+    margin-top: 45px;
     font-size: 0.9em;
     width: 105px;
   }
