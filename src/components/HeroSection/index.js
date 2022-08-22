@@ -26,7 +26,7 @@ import {
   MintCText2,
 } from "./HeroElements";
 
-const contractAddress = "0x4E010E3C8e7E7aA3FD7c41854d43a12f456c4818";
+const contractAddress = "0x1f954C3c57DC4C8226529cD1f5FbA1Ab7fcd97E9";
 const abi = contract.abi;
 
 const HeroSection = () => {
@@ -34,8 +34,7 @@ const HeroSection = () => {
   const [amount, setAmount] = useState(1);
   const [supply, setSupply] = useState("0");
   const [walletBalance, setWalletBalance] = useState("0");
-  const [connected, setConnected] = useState("Connect Wallet");
-  const [feedback, setFeedback] = useState("");
+  const [feedback, setFeedback] = useState("Mint");
 
   const incrementCount = () => {
     if (amount <= 14) {
@@ -97,18 +96,28 @@ const HeroSection = () => {
         const signer = provider.getSigner();
         const nftContract = new ethers.Contract(contractAddress, abi, signer);
         let ethAmount = (222 * _amount).toString();
+        let free = (0.0).toString();
 
-        const mintNft = await nftContract.mint(_amount, {
-          value: ethers.utils.parseEther(ethAmount),
-        });
-        setFeedback("Minting your NFT!!!");
-        await mintNft.wait();
-        setFeedback("Finished!");
+        if (supply < 888) {
+          const mintNft = await nftContract.mint(_amount, {
+            value: ethers.utils.parseEther(free),
+          });
+          setFeedback("Minting your NFT!!!");
+          await mintNft.wait();
+          setFeedback("Finished!");
+        } else {
+          const mintNft = await nftContract.mint(_amount, {
+            value: ethers.utils.parseEther(ethAmount),
+          });
+          setFeedback("Minting your NFT!!!");
+          await mintNft.wait();
+          setFeedback(`Finished! Click "My NFTs" to see your NFTs!!`);
+        }
       } else {
         console.log("Ethereum object does not exist!");
       }
     } catch (err) {
-      setFeedback("Not enough wDOGE!");
+      setFeedback("error minting NFT ):");
     }
   };
 
@@ -155,7 +164,7 @@ const HeroSection = () => {
   const connectWalletButton = () => {
     return (
       <Button onClick={connect} className="cta-button connect-wallet-button">
-        Connect Wallet
+        Connect
       </Button>
     );
   };
@@ -168,7 +177,7 @@ const HeroSection = () => {
           mintNft(amount);
         }}
       >
-        Mint
+        {feedback}
       </Button>
     );
   };
@@ -185,7 +194,7 @@ const HeroSection = () => {
         <Grid src={grid}></Grid>
         <MintDiv>
           <MiniAbout>
-          DogeVerse is a collection of 8888  Doge Shibes built on DogeChain!
+            DogeVerse is a collection of 8888 Doge Shibes built on DogeChain!
           </MiniAbout>
           <First>First 800 FREE (max. 1 NFT / tx.)</First>
           <Then>Then 222 wDOGE each (max 10 NFT / tx.)</Then>

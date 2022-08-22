@@ -23,7 +23,7 @@ import {
 } from "react-router-dom";
 import { render } from "@testing-library/react";
 
-const contractAddress = "0xfaBD1fBEDdfdEeCAdf073AA54E1Db166cfc62622";
+const contractAddress = "0x1f954C3c57DC4C8226529cD1f5FbA1Ab7fcd97E9";
 const abi = contract.abi;
 
 const ViewNFT = () => {
@@ -105,17 +105,12 @@ const ViewNFT = () => {
   const generateCard = () => {
     setRender(
       nfts.map((nft, index) => (
-         <div key={index}>
-         <Container>
-          <YourNFTS
-            src={nft.image}>
-          </YourNFTS>
-           <YourNFTSdata>
-            {nft.name}
-          </YourNFTSdata>
-        </Container>
-        
-        </div> 
+        <div key={index}>
+          <Container>
+            <YourNFTS src={nft.image}></YourNFTS>
+            <YourNFTSdata>{nft.name}</YourNFTSdata>
+          </Container>
+        </div>
       ))
     );
   };
@@ -144,13 +139,15 @@ const ViewNFT = () => {
             Connect
           </Connect>
 
-          <Connect disabled={disabled}
-           onClick={() => {
-        setDisabled(true);
-        getMintedNFT();
-      }}>
-        View NFTs
-        </Connect>
+          <Connect
+            disabled={disabled}
+            onClick={() => {
+              setDisabled(true);
+              getMintedNFT();
+            }}
+          >
+            View NFTs
+          </Connect>
           <Div2>{render}</Div2>
         </Div>
       </MintDiv>
@@ -160,4 +157,3 @@ const ViewNFT = () => {
 };
 
 export default ViewNFT;
-
