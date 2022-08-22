@@ -26,7 +26,7 @@ import {
   MintCText2,
 } from "./HeroElements";
 
-const contractAddress = "0x1f954C3c57DC4C8226529cD1f5FbA1Ab7fcd97E9";
+const contractAddress = "0xdda9c6990864f282c4E0B4b4F5E550C3B6c1bfd0";
 const abi = contract.abi;
 
 const HeroSection = () => {
