@@ -59,14 +59,12 @@ export const GIF = styled.img`
 export const ViewNFTs = styled.button`
   display: flex;
   color: white;
-  text-align: center;
   background-color: black;
-  font-size: 1em;
+  font-size: 15px;
   margin: 1em;
-  padding: 0.35em 1.6em;
+  padding: 0.35em 1em;
   border: 2px solid orange;
-  border-radius: 3px;
-  position: absolute;
+  border-radius: 10px;
   margin-left: 90vw;
   margin-top: 25px;
   height: 35px;
