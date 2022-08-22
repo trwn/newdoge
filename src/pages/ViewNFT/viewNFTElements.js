@@ -20,6 +20,7 @@ export const PreBg = styled.div`
   height: 100%;
   overflow: hidden;
   background: #de9e45;
+  
 `;
 
 export const PreLogo = styled.img`
@@ -29,6 +30,8 @@ export const PreLogo = styled.img`
   margin-right: auto;
   margin-top: 10px;
   background: #de9e45;
+  position: relative;
+  
 `;
 
 export const MintDiv = styled.div`
@@ -59,16 +62,19 @@ export const GIF = styled.img`
 export const ViewNFTs = styled.button`
   display: flex;
   color: white;
+  text-align: center;
   background-color: black;
-  font-size: 15px;
+  font-size: 1em;
   margin: 1em;
-  padding: 0.35em 1em;
+  padding: 0.35em 1.6em;
   border: 2px solid orange;
   border-radius: 10px;
+  position: absolute;
   margin-left: 90vw;
   margin-top: 25px;
   height: 35px;
   width: 100px;
+  
 `;
 
 export const Div = styled.div``;
