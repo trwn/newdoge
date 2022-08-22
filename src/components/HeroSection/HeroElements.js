@@ -196,7 +196,7 @@ export const PriceText2 = styled.div`
   padding-left: 315px;
 
   @media screen and (max-width: 767px) {
-  padding-left: 240px;
+  padding-left: 180px;
   }
 `;
 
