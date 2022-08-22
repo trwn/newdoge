@@ -18,6 +18,10 @@ export const Logo = styled.img`
   margin-left: auto;
   margin-right: auto;
   background: #de9e45;
+  @media screen and (max-width: 767px) {
+    height: 50px;
+
+  }
 `;
 
 export const ViewNFT = styled.button`
@@ -35,4 +39,11 @@ export const ViewNFT = styled.button`
   margin-top: 25px;
   height: 35px;
   width: 120px;
+  @media screen and (max-width: 767px) {
+    height: 30px;
+    margin-left: 65vw;
+    margin-top: 45px;
+    font-size: 0.9em;
+    width: 105px;
+  }
 `;
