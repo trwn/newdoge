@@ -10,17 +10,26 @@ import {
   ViewNFTs,
   Div,
   Connect,
+  Div2,
+  YourNFTS,
+  YourNFTSdata,
+  Container,
 } from "./viewNFTElements";
 import logo from "../../images/logo.png";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Link,
+  NavigationType,
+} from "react-router-dom";
 import { render } from "@testing-library/react";
-//a
-const contractAddress = "0xbc97cc67f38E37C6426c58E4811cbc3b5eC49c52";
+
+const contractAddress = "0xfaBD1fBEDdfdEeCAdf073AA54E1Db166cfc62622";
 const abi = contract.abi;
 
 const ViewNFT = () => {
   const [connected, setConnected] = useState("Connect Wallet");
   const [nfts, setNft] = useState([]);
+  const [render, setRender] = useState([]);
 
   const connect = async () => {
     const { ethereum } = window;
@@ -94,12 +103,24 @@ const ViewNFT = () => {
   };
 
   const generateCard = () => {
-    nfts.map((nft, index) => {
-      console.log(nft.name);
-      const x = <img key={index} src={nft.image} />;
-      return render(x);
-    });
+    setRender(
+      nfts.map((nft, index) => (
+         <div key={index}>
+         <Container>
+          <YourNFTS
+            src={nft.image}>
+          </YourNFTS>
+           <YourNFTSdata>
+            {nft.name}
+          </YourNFTSdata>
+        </Container>
+        
+        </div> 
+      ))
+    );
   };
+
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     checkIfWalletIsConnected();
@@ -122,8 +143,15 @@ const ViewNFT = () => {
           >
             Connect
           </Connect>
-          <Connect onClick={getMintedNFT}>view</Connect>
-          <div>{generateCard()}</div>
+
+          <Connect disabled={disabled}
+           onClick={() => {
+        setDisabled(true);
+        getMintedNFT();
+      }}>
+        View NFTs
+        </Connect>
+          <Div2>{render}</Div2>
         </Div>
       </MintDiv>
       <Footer />
@@ -132,3 +160,4 @@ const ViewNFT = () => {
 };
 
 export default ViewNFT;
+
