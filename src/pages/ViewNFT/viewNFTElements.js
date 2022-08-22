@@ -20,6 +20,10 @@ export const PreBg = styled.div`
   height: 100%;
   overflow: hidden;
   background: #de9e45;
+  @media screen and (max-width: 767px) {
+    height: 75px;
+
+  }
   
 `;
 
@@ -31,6 +35,10 @@ export const PreLogo = styled.img`
   margin-top: 10px;
   background: #de9e45;
   position: relative;
+  @media screen and (max-width: 767px) {
+    height: 50px;
+    margin-top: 1px;
+  }
   
 `;
 
@@ -74,8 +82,17 @@ export const ViewNFTs = styled.button`
   margin-top: 25px;
   height: 35px;
   width: 100px;
-  
+  @media screen and (max-width: 767px) {
+    height: 30px;
+    margin-left: 65vw;
+    margin-top: -8px;
+    font-size: 0.9em;
+    width: 105px;
+  }
+
 `;
+  
+
 
 export const Div = styled.div``;
 
