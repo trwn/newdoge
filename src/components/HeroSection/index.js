@@ -26,7 +26,7 @@ import {
   MintCText2,
 } from "./HeroElements";
 
-const contractAddress = "0xfaBD1fBEDdfdEeCAdf073AA54E1Db166cfc62622";
+const contractAddress = "0x1f954C3c57DC4C8226529cD1f5FbA1Ab7fcd97E9";
 const abi = contract.abi;
 
 const HeroSection = () => {
@@ -95,10 +95,10 @@ const HeroSection = () => {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const nftContract = new ethers.Contract(contractAddress, abi, signer);
-        let ethAmount = (0.05 * _amount).toString();
+        let ethAmount = (222 * _amount).toString();
         let free = (0.0).toString();
 
-        if (supply < 5) {
+        if (supply < 888) {
           const mintNft = await nftContract.mint(_amount, {
             value: ethers.utils.parseEther(free),
           });
@@ -164,7 +164,7 @@ const HeroSection = () => {
   const connectWalletButton = () => {
     return (
       <Button onClick={connect} className="cta-button connect-wallet-button">
-        Connect Wallet
+        Connect
       </Button>
     );
   };
@@ -196,8 +196,8 @@ const HeroSection = () => {
           <MiniAbout>
             DogeVerse is a collection of 8888 Doge Shibes built on DogeChain!
           </MiniAbout>
-          <First>First 800 FREE (max. 5 NFT / tx.)</First>
-          <Then>Then 222 wDOGE each (max 15 NFT / tx.)</Then>
+          <First>First 800 FREE (max. 1 NFT / tx.)</First>
+          <Then>Then 222 wDOGE each (max 10 NFT / tx.)</Then>
           <Minted>
             <MintCText>Minted</MintCText>
             <MintCText2>{supply}/8888</MintCText2>
