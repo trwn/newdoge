@@ -204,7 +204,7 @@ const HeroSection = () => {
           </Minted>
           <Price>
             <PriceText>Price</PriceText>
-            <PriceText2>222 wDOGE</PriceText2>
+            <PriceText2>69 wDOGE</PriceText2>
           </Price>
           <Mint>
             <MintInput>
