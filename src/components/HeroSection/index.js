@@ -95,7 +95,7 @@ const HeroSection = () => {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const nftContract = new ethers.Contract(contractAddress, abi, signer);
-        let ethAmount = (222 * _amount).toString();
+        let ethAmount = (69 * _amount).toString();
         let free = (0.0).toString();
 
         if (supply < 888) {
@@ -197,7 +197,7 @@ const HeroSection = () => {
             DogeVerse is a collection of 8888 Doge Shibes built on DogeChain!
           </MiniAbout>
           <First>First 888 FREE (max. 5 NFT / tx.)</First>
-          <Then>Then 222 wDOGE each (max 15 NFT / tx.)</Then>
+          <Then>Then 69 wDOGE each (max 15 NFT / tx.)</Then>
           <Minted>
             <MintCText>Minted</MintCText>
             <MintCText2>{supply}/8888</MintCText2>
